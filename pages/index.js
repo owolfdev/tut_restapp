@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useQuery } from "react-query";
+import { BiRefresh } from "react-icons/bi";
 
 export default function Home() {
   const { isLoading, isFetching, error, data, refetch } = useQuery(
@@ -26,7 +27,9 @@ export default function Home() {
           className=" bg-blue-600 text-white px-2 py-1 rounded shadow-md hover:bg-blue-500 active:text-black active:bg-blue-300 hover:ring-2 ring-blue-700  "
           onClick={handleClick}
         >
-          Refresh
+          <div className="flex gap-1 items-center text-white">
+            Refresh <BiRefresh />
+          </div>
         </button>
       </div>
 
